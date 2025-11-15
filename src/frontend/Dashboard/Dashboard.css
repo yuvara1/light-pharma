@@ -1,0 +1,259 @@
+
+:root {
+  --bg-1: #020617;
+  --panel: #0b1220;
+  --muted: #9aa4b2;
+  --accent: #6366f1;
+  --card-border: rgba(255, 255, 255, 0.04);
+  --glass: rgba(255, 255, 255, 0.02);
+}
+
+.dashboard-root {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #000814 0%, #030423 100%);
+  color: #fff;
+  padding-bottom: 48px;
+}
+
+.dashboard-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--accent);
+}
+.top-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 18px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.title {
+  margin: 0;
+  font-size: 1.4rem;
+}
+.subtitle {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.btn {
+  background: var(--panel);
+  color: #fff;
+  border: 1px solid var(--card-border);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn.primary {
+  background: linear-gradient(90deg, #6d28d9, #4f46e5);
+  border: none;
+}
+.btn.ghost {
+  background: transparent;
+  border: 1px dashed rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  border: 1px solid var(--card-border);
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
+}
+
+.card-title {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  flex: 1;
+  background: var(--glass);
+  border-radius: 8px;
+}
+.stat-card + .stat-card {
+  margin-left: 10px;
+}
+.stat-label {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.stat-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.card-row {
+  display: flex;
+  gap: 10px;
+}
+
+.dashboard-side .card + .card {
+  margin-top: 12px;
+}
+
+.dashboard-main .card + .card {
+  margin-top: 12px;
+}
+
+.recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.small-muted {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.muted {
+  opacity: 0.9;
+}
+
+
+input,
+select,
+textarea {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+
+.page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #000814 0%, #030423 100%);
+  color: #fff;
+  padding: 24px 0 48px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+/* generic card */
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  border: 1px solid var(--card-border);
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.5);
+}
+
+/* form controls and buttons */
+.input,
+input,
+select,
+textarea {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn {
+  background: var(--panel);
+  color: #fff;
+  border: 1px solid var(--card-border);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn.primary {
+  background: linear-gradient(90deg, #6d28d9, #4f46e5);
+  border: none;
+}
+.btn.ghost {
+  background: transparent;
+  border: 1px dashed rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+}
+
+/* small util classes */
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.small-muted {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.stack {
+  display: grid;
+  gap: 12px;
+}
+
+/* responsive tweaks */
+@media (max-width: 900px) {
+  .row.responsive {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
